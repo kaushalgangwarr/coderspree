@@ -7,7 +7,7 @@ int main()
     scanf("%d%d",&low,&high);
     for(i=low;i<=high;i++)
     {
-        int count=0;
+       int count=0;
        for(j=2;j<=high;j++)
        {
            if(i%j==0)
