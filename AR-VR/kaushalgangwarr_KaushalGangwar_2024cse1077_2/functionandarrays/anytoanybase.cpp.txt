@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int AnyToAny(int n, int b1, int b2) {
+  int x,y=1,z=0,r=0,s=1;
+  while(n!=0)
+  {
+      x=n%10;
+      n=n/10;
+      z=z+x*y;
+      y*=b1;
+  }
+  while(z!=0)
+  {
+      x=z%b2;
+      z=z/b2;
+      r=r+x*s;
+      s*=10;
+  }
+  return r;
+}
+int main() {
+  int n;
+  int b1;
+  int b2;
+  cin >> n;
+  cin >> b1;
+  cin >> b2;
+  int res = AnyToAny(n, b1, b2);
+  cout << res << endl;
+}
