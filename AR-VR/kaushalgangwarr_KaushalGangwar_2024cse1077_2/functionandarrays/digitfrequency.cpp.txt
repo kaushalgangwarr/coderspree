@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int digFreq(int n, int d) {
+  int x=2,count=0;
+  while(x!=0)
+  {
+      x=n%10;
+      n=n/10;
+      if(x==d)
+      {
+          count++;
+      }
+  }
+  return count;
+}
+int main() {
+  int n, d;
+  cin >> n >> d;
+  int res = digFreq(n, d);
+  cout << res << endl;
+}
